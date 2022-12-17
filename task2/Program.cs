@@ -1,12 +1,14 @@
 ﻿Console.Write("Введите число: ");
 int n = Convert.ToInt32(Console.ReadLine());
-int l = Convert.ToString(n).Length;
-int a = 0;
+int a = n;
 int b = 0;
-for (int i = 0; i < l; i++)
+while (a > 0)
 {
-    a = n - n % 10;
-    b = b + (n - a);
-    n = n / 10;
+    int c = a % 10;
+    if (c == 0 || n % c == 0)
+    {
+        b += c;
+    }
+    a = a / 10;
 }
-Console.WriteLine(b);
+Console.Write(b);
